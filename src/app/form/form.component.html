@@ -1,0 +1,16 @@
+<h2>Registrar visita</h2>
+<div>
+<div class="form-group">
+  <label for="name">Nombre</label>
+  <input [(ngModel)]="visitas.nombre" type="text" class="form-control" id="nombre" placeholder="Ingresar nombre">
+</div>
+<div class="form-group">
+  <label for="name">Apellidos</label>
+  <input [(ngModel)]="visitas.apellidos" type="text" class="form-control" id="apellidos" placeholder="Ingrese apellidos">
+</div>
+<div class="form-group">
+  <label for="name">Motivo</label>
+  <textarea [(ngModel)]="visitas.motivo" type="text" class="form-control" id="motivo" placeholder="Motivo de visita"></textarea>
+</div>
+<button (click)="saveVisita()" class="btn btn-primary btn-block">Registrar</button>
+</div>

@@ -1,0 +1,24 @@
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Motivo</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let visitas of visitas">
+      <td>{{visitas.id}}</td>
+      <td>{{visitas.name}}</td>
+      <td>{{visitas.apellidos}}</td>
+      <td>{{visitas.motivo}}</td>
+      <td>
+        <a class="btn btn-primary btn-sm" routerLink="/form/{{visitas.id}}">Ver/editar</a>
+        <a class="btn btn-primary btn-sm btn-danger" (click)="delete(visitas.id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
